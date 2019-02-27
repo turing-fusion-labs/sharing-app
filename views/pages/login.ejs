@@ -5,13 +5,20 @@
 </head>
   <body>
     <div class="container">
-      <fieldset>
-        <form action="/login" method="get">
-          <input name="username" type="text" class="ghost-input" placeholder="Enter User Name" required>
-          <input name="password" type="password" class="ghost-input" placeholder="Enter Password" required>
-          <input type="submit" class="ghost-button" value="Login">
-        </form>
-      </fieldset>
+      <div class="row center-align">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content white-text">
+              <h3 class="blue-text text-darken-2">Login</h3>
+                <form action="/login" method="get">
+                  <input name="username" type="text" class="ghost-input" placeholder="Enter User Name" required>
+                  <input name="password" type="password" class="ghost-input" placeholder="Enter Password" required>
+                  <button type="submit" class="waves-effect waves-light btn">Login</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 <footer>
