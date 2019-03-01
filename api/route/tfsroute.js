@@ -6,7 +6,9 @@ module.exports = function(app) {
 
   app.get('/', function (req, res) {
     // NEW CODE
-    res.render('pages/login');
+	var test = tfsItemController.list_all_items();  
+	console.log(test);
+    res.render('pages/login', {"test" : test});
   })
   
   app.get('/login', function (req, res) {
