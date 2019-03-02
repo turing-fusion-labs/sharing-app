@@ -5,12 +5,25 @@
 </head>
   <body>
     <div class="container">
+      <header>
+        <% include ../partials/header %>
+      </header>
       <fieldset>
         <form action="/add" method="get">
-          Dashboard 1
-          Dashboard 2
-          Dashboard 3
-          <input type="submit" name="Add New" />
+          <table>
+            <tr>
+              <th>ID</th><th>Name</th><th>Type</th>
+            </tr>
+
+            <% for (var i = 0; i < items.length; /* I save the data in a variable 'quotation', I don't know how you named your variable  */  i++) { %>
+            <tr>
+              <td><%= items[i]._id %></td>
+              <td><%= items[i].name %></td>
+              <td><%= items[i].type %></td>
+            </tr>
+            <% } %>
+          </table>
+          <a href="/addItem">Add Item   </a>
         </form>
       </fieldset>
     </div>
