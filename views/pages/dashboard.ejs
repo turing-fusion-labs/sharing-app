@@ -12,14 +12,14 @@
         <form action="/add" method="get">
           <table>
             <tr>
-              <th>ID</th><th>Name</th><th>Link</th>
+              <th>Description</th><th>Link</th><th>Vote</th>
             </tr>
 
             <% for (var i = 0; i < items.length; /* I save the data in a variable 'quotation', I don't know how you named your variable  */  i++) { %>
             <tr>
-              <td><%= items[i]._id %></td>
               <td><%= items[i].name %></td>
               <td><a href="http://<%= items[i].link%>" target="_blank"><%= items[i].link %></a></td>
+              <td><img src="/../../icons/thumb_down.png"/> </td>
             </tr>
             <% } %>
           </table>

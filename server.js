@@ -10,6 +10,7 @@ var express = require('express'),
 //DB config
 var User = new Datastore();
 var Item = new Datastore();
+app.use( express.static( "icons" ) );
 
 var admin = {
   username: 'admin',
