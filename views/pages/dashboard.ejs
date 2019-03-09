@@ -19,7 +19,12 @@
             <tr>
               <td><%= items[i].name %></td>
               <td><a href="http://<%= items[i].link%>" target="_blank"><%= items[i].link %></a></td>
-              <td><img src="/thumb_down.png"> </td>
+              <td>
+              	<div>
+              		<img id="likeIcon" src="/outline_thumb_up.png" onclick="toggleLike(this)">
+              		<%= items[i].likes %>
+              	</div>
+              </td>
             </tr>
             <% } %>
           </table>
@@ -32,3 +37,14 @@
   <% include ../partials/footer %>
 </footer>
 </html>
+
+<script language="javascript">
+function toggleLike(x){
+	if(x.src.includes("outline_thumb_up.png")){
+		x.src = "/thumb_up.png"
+	}
+	else{
+		x.src = "/outline_thumb_up.png"
+	}
+}
+</script>
